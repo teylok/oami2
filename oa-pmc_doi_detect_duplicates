@@ -1,0 +1,13 @@
+#!/bin/sh
+
+source="pmc_doi"
+dois="10.1371/journal.pone.0050188
+10.1371/journal.pone.0047867
+10.1186/1472-6785-10-9
+10.1371/journal.pone.0061541
+10.1371/journal.pone.0048222
+10.1371/journal.pone.0038803
+10.1371/journal.pone.0062199"
+
+./oa-cache clear-database "$source"
+echo "$dois" | ./oami_pmc_doi_detect_duplicates
